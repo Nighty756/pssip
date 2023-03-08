@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- События мыши -->
+            <p class="da">События мыши</p>
+			<div class="block-for-mouse">
+			<span>Я дочерний SPAN</span>
+			</div>
+    <!-- --------------- -->
+    <!-- Клавиатура -->
+    <p class="da">События Клавиатуры</p>
+				<div class="textarea">
+					<textarea autocomplete="off" maxlength="30" name="form[]" class="textarea__item"></textarea>
+					<div class="textarea__counter">Осталось <span></span> символов</div>
+				</div>
+				 <!-- --------------- -->
+
+                <!-- Перетаскивание Drag`n`Drop -->
+				<p class="da">Drag`n`Drop</p>
+				<div class="drag-field">
+					<div class="drag-field__item"></div>
+					<div class="drag-field__point"></div>
+				</div>
+			<!-- --------------- -->
+
+    <!-- События прокрутки -->  
+                <div class="scrollpix" id="showScroll"></div>
+	<!-- --------------- -->
+
+        <!-- События указателя -->
+        <p class="da">События указателя</p>
+    <p>Drag the ball.</p>
+    <img src="https://js.cx/clipart/ball.svg" style="cursor:pointer" width="40" height="40" id="ball">
+    <textarea id="text" style="display:block;width:300px;height:100px"></textarea>
+    	<!-- --------------- -->
+    <script src="script.js"></script>
+</body>
+</html>

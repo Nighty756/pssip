@@ -1,0 +1,30 @@
+.scroll-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 2px solid black;
+    z-index: 10;
+}
+._icon-arrow-up{
+    font-size: 35px;
+}
+
+
+@media(max-width:767px) {
+.scroll-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    z-index: 10;
+}
+._icon-arrow-up{
+    font-size: 20px;
+}
+}

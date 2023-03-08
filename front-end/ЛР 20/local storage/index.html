@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Регистрация пользователя</h1>
+   <script>
+    function validate2(form_id,mail) {
+   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+   var address = document.forms[form_id].elements[mail].value;
+   if(reg.test(address) == false) {
+      alert('Введите корректный e-mail');
+      return false;
+   }
+
+}
+   </script>
+    <form name="form_test" action="#" method="#" id="form_id" onsubmit="javascript:return validate2('form_id','mail');">
+        <div>
+          <label>
+            Фамилия:
+            <input type="text"  name="lastname" value="" maxlength="10" required>
+          </label>
+        </div>
+        <div>
+            <label>
+                Имя:
+                <input type="text" pattern="^[a-zA-Z]+$"  id="name" name="name" value="">
+              </label>
+        </div>
+        <div>
+          <label>
+            Отчество:
+            <input type="text"  name="patronymic" value="">
+          </label>
+        </div>
+        <div>
+          <label>
+            Должность:
+            <input type="text" id="jobs" name="job" value="">
+          </label>
+        </div>
+        <div>
+            <label>
+                Email:
+            <input type="text" name="mail" id="mail" value="">
+              </label>
+  </div>
+  <div>
+    <label>
+        Телефон:
+        <input type="tel" name="phone_number" value="">
+      </label>
+</div>
+<div>
+    <label>
+        Пароль:
+    <input type="password" name="pasw" value="">
+      </label>
+</div>
+<div>
+    <label>
+        Повторите пароль:
+    <input type="password" name="povtpasw" value="">
+      </label>
+</div>
+  <div id="printBlock"></div>
+        <div>
+          <button class="button_form" type="submit">Ок</button>
+          <button class="button_form" type="submit">Отмена</button>
+          </div>
+      </form>
+    <script src="script.js"></script>
+</body>
+</html>

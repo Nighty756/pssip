@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onclick="alert(`сюда всплытие не дойдёт`)">
+
+    <!-- Пример 1 -->
+    <input value="Нажми меня" onclick="alert('Клик!')" type="button">
+    <!-- ---------------- -->
+
+    <!-- Пример 2 -->
+    <script>
+        function countRabbits() {
+          for(let i=1; i<=3; i++) {
+            alert("Кролик номер " + i);
+          }
+        }
+      </script>
+    <input type="button" onclick="countRabbits()" value="Считать кроликов!">      
+    <!-- ---------------- -->
+
+      <!-- Пример 3 -->
+    <input id="elem" type="button" value="Нажми меня!">
+<script>
+  elem.onclick = function() {
+    alert('Спасибо');
+  };
+</script>
+ <!-- ---------------- -->
+
+ <!-- Пример 4 -->
+ <button onclick="alert(this.innerHTML)">Нажми меня</button>
+  <!-- ---------------- -->
+
+ <!-- Пример 5 -->
+  <input id="element" type="button" value="Нажми меня"/>
+ 
+<script>
+  function handler1() {
+    alert('Спасибо!');
+  };
+ 
+  function handler2() {
+    alert('Спасибо ещё раз!');
+  }
+  element.onclick = () => alert("Привет");
+  element.addEventListener("click", handler1); // Спасибо!
+  element.addEventListener("click", handler2); // Спасибо ещё раз!
+</script>
+  <!-- ---------------- -->
+
+ <!-- Пример 6 -->
+ <input id="input" type="button" value="Нажми меня"/>
+ <script>
+  function handler() {
+    alert( 'Спасибо!!!!' );
+  }
+  input.addEventListener("click", handler);
+  input.removeEventListener("click", handler);
+  </script>
+ <!-- ---------------- -->
+ 
+ <!-- Пример 7 -->
+ <style>
+    body * {
+      margin: 10px;
+      border: 1px solid blue;
+    }
+  </style>
+   
+  <form onclick="alert('form')">FORM
+    <div onclick="alert('div')">DIV
+      <p onclick="alert('p')">P</p>
+    </div>
+  </form>
+  <!-- ---------------- -->
+
+   <!-- Пример 8 -->
+  <button onclick="event.stopPropagation()">Кликни меня</button>
+  <!-- ---------------- -->
+
+  <script src="script.js"></script>  
+</body>
+</html>

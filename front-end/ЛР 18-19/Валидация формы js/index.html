@@ -1,0 +1,153 @@
+<html>
+<head>
+<script type='text/javascript'>
+function validate(){
+   //Считаем значения из полей name и email в переменные x и y
+   var x=document.forms['form']['name'].value;
+   var y=document.forms['form']['email'].value;
+   //Если поле name пустое выведем сообщение и предотвратим отправку формы
+   if (x.length==0){
+      document.getElementById('namef').innerHTML='*данное поле обязательно для заполнения';
+      return false;
+   }
+   //Если поле email пустое выведем сообщение и предотвратим отправку формы
+   if (y.length==0){
+      document.getElementById('emailf').innerHTML='*данное поле обязательно для заполнения';
+      return false;
+   }
+   //Проверим содержит ли значение введенное в поле email символы @ и .
+   at=y.indexOf("@");
+   dot=y.indexOf(".");
+   //Если поле не содержит эти символы знач email введен не верно
+   if (at<1 || dot <1){
+      document.getElementById('emailf').innerHTML='*email введен не верно';
+      return false;
+   }
+}
+function validate2(form_id,email) {
+   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+   var address = document.forms[form_id].elements[email].value;
+   if(reg.test(address) == false) {
+      alert('Введите корректный e-mail');
+      return false;
+   }
+
+}
+
+</script>
+</head>
+<body>
+<form name='form' onsubmit='return validate()'>
+Имя: <input type='text' name='name'> <span style='color:red' id='namef'></span><br />
+e-mail: <input type='text' name='email'> <span style='color:red' id='emailf'></span><br />
+
+<input type='submit' value='Отправить форму'>
+</form>
+
+<form id="form_id" method="post" action="" onsubmit="javascript:return validate2('form_id','email');">
+    <input type="text" id="email" name="email" />
+    <input type="submit" value="Submit"/>
+ </form>
+
+ <form onsubmit="return checkForm(this);">
+    <input type="hidden" />
+    <fieldset>
+        Имя: <input type="text" name="name" /><br/>
+        E-mail: <input type="text" name="email" /><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Интересы:</legend>
+        <input type="checkbox" name="inter[]" value="music" /> Music<br/>
+        <input type="checkbox" name="inter[]" value="TV" /> TV<br/>
+    </fieldset>
+    <fieldset>
+        <legend>Возраст:</legend>
+        <input type="checkbox" name="age" id="age1" value="10-25" /> <label for="age1">10-25</label><br/>
+        <input type="checkbox" name="age" id="age2" value="25-50" /> <label for="age2">25-50</label><br/>
+        <input type="checkbox" name="age" id="age3" value="50+" /> <label for="age3">50+</label><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Любимое время суток:</legend>
+        <select>
+            <option value="0" selected="1">Выберите...</option>
+            <option value="1">Утро</option>
+            <option value="2">День</option>
+            <option value="3">Вечер</option>
+            <option value="4">Ночь</option>
+        </select><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Комментарий:</legend>
+        <textarea></textarea><br/>
+    </fieldset>
+    <fieldset>
+        <legend>Прикрепить файл:</legend>
+        <input type="file" name="name" /><br/>
+    </fieldset>
+    <input type="submit" value="Отправить" />
+</form>
+<script>
+    function checkForm(form) {
+    // Заранее объявим необходимые переменные
+    var el, // Сам элемент
+        elName, // Имя элемента формы
+        value, // Значение
+        type; // Атрибут type для input-ов
+    var errorList = []; // Массив списка ошибок, по дефолту пустой
+
+    var errorText = {    // Хэш с текстом ошибок (ключ - ID ошибки)
+
+        1 : "Не заполнено поле 'Имя'",
+        2 : "Не заполнено поле 'E-mail'",
+        3 : "Не прикреплен файл",
+        4 : "Не оставлен комментарий",
+        5 : "Не выбрано любимое время суток"
+    }
+    // Получаем семейство всех элементов формы проходимся по ним в цикле
+    for (var i = 0; i < form.elements.length; i++) {
+        el = form.elements[i];
+        elName = el.nodeName.toLowerCase();
+        value = el.value;
+        if (elName == "input") { // INPUT
+            // Определяем тип input-а
+            type = el.type.toLowerCase();
+            // Разбираем все инпуты по типам и обрабатываем содержимое
+            switch (type) {
+                case "text" :
+                    if (el.name == "name" && value == "") errorList.push(1);
+                    if (el.name == "email" && value == "") errorList.push(2);
+                break;
+                case "file" :
+                    if (value == "") errorList.push(3);
+                break;
+                case "checkbox" :
+                    // Ничего не делаем, хотя можем
+                break;
+                case "radio" :
+                    // Ничего не делаем, хотя можем
+                break;
+                default :
+                    // Сюда попадают input-ы, которые не требуют обработки type = hidden, submit, button, image
+                break;
+            }
+        } else if (elName == "textarea") { // TEXTAREA
+            if (value == "") errorList.push(4);
+        } else if (elName == "select") { // SELECT
+            if (value == 0) errorList.push(5);
+        } else {
+            // Обнаружен неизвестный элемент ;)
+        }
+    }
+    // Финальная стадия  Если массив ошибок пуст - возвращаем true
+    if (!errorList.length) return true;
+    // Если есть ошибки - формируем сообщение, выовдим alert  и возвращаем false
+    var errorMsg = "При заполнении формы допущены следующие ошибки:\n\n";
+    for (i = 0; i < errorList.length; i++) {
+        errorMsg += errorText[errorList[i]] + "\n";
+    }
+    alert(errorMsg);
+    return false;
+}
+</script>
+</body>
+</html>

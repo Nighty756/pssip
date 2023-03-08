@@ -1,0 +1,320 @@
+/* Верхний контент */
+.head_reviews {
+    position: relative;
+}
+
+.head_reviews_content {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: calc(30px + 20 * (100vw / 1440));
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+._ibg {
+    position: relative;
+    background: #000;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.main_block-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* ===================================================================================== */
+.info_room {
+    margin: 30px 0px 0px 0px;
+}
+
+.info_rooms_body {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+}
+
+/* Информация о номере */
+h2 {
+    font-size: calc(25px + 15 * (100vw / 1440));
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Слайдер */
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.gallery_body {
+    width: 50%;
+}
+
+.nav_img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.single_img img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.single_img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav_img {
+    cursor: pointer;
+}
+
+.nav_img:not(:last-child) {
+    margin: 0px 5px 0px 0px;
+}
+
+.slider_gallery .slick-track {
+    margin: 10px 0px 0px 0px;
+}
+
+.slider_gallery {
+    position: relative;
+}
+
+.slider_gallery .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.slider_gallery .slick-arrow.slick-prev {
+    cursor: pointer;
+    left: 5px;
+    background: url('../icons/icons-arrows/left-circle.svg') 0 0 / 100% no-repeat;
+}
+
+.slider_gallery .slick-arrow.slick-next {
+    cursor: pointer;
+    right: 5px;
+    background: url('../icons/icons-arrows/right-circle.svg') 0 0 / 100% no-repeat;
+}
+
+.slider_gallery .slick-arrow.slick-disabled {
+    opacity: 0.2;
+}
+
+/* ------------------------------------------------------------------ */
+/* Информация он номере */
+.info_rooms_content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 0px 25px;
+}
+
+.info_rooms_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_rooms_row>*:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+}
+
+/* Иконки */
+.rooms_info_icons {
+    display: flex;
+    border-bottom: 1px solid #808080;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 25px 0px;
+}
+
+.rooms_icon_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 33.333%;
+}
+
+.rooms_icon_text {
+    text-align: center;
+    font-size: calc(12px + 4 * (100vw / 1440));
+    line-height: calc(22 / 16 * 100%);
+}
+
+.rooms_icon img {
+    max-width: 100%;
+
+}
+
+/* ------------------------------------------------------------------ */
+/* Цена */
+
+.rooms_info_price {
+    font-size: calc(14px + 2 * (100vw / 1440));
+}
+
+.bold_price {
+    font-size: calc(15px + 10 * (100vw / 1440));
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------------ */
+/* Кнопка */
+.booking-btn {
+    background-color: #FFCB47;
+    display: block;
+    color: #000;
+    width: 170px;
+    transition: .2s;
+    padding: 25px 0px;
+    text-align: center;
+}
+
+.booking-btn:hover {
+    box-shadow: 1px 1px 8px 7px rgba(255, 203, 71, 0.3);
+}
+
+/* ------------------------------------------------------------------ */
+/* Описание */
+.description_room {
+    margin: 42px 0px 71px 0px;
+}
+
+.title_info_room {
+    font-size: calc(20px + 10 * (100vw / 1440));
+}
+
+.title_description_room {
+    margin: 0px 0px 20px 0px;
+}
+
+.description_text_room {
+    font-weight: 300;
+    line-height: calc(27 / 20 * 100%);
+    font-size: calc(14px + 6 * (100vw / 1440));
+}
+
+/* ------------------------------------------------------------------ */
+/* Оснащение номера */
+
+.equipment_room {
+    background-color: #E9ECE0;
+    padding: 20px 0px 0px 0px;
+}
+
+.equipment_room_info{
+    font-size: calc(14px + 6 * (100vw / 1440));
+    padding: 25px 0px;
+}
+/* ------------------------------------------------------------------ */
+/* ===================================================================================== */
+@media(max-width:768px) {
+    .gallery_body {
+        width: 100%;
+    }
+
+    .info_rooms_content {
+        width: 100%;
+        padding: 0px;
+        margin: 30px 0px 0px 0px;
+    }
+
+    .info_rooms_body {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Адаптиынй шрифт */
+    h1 {
+        font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    h2 {
+        font-size: calc(25px + (15 + 15 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_info_price {
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_icon_text {
+        font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .bold_price {
+        font-size: calc(15px + (10 + 10 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .title_description_room {
+        font-size: calc(20px + (10 + 10 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .description_text_room {
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .equipment_room_info{
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .equipment_items li {
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+    }
+}
+
+@media(max-width:480px) {
+
+    .title_equipment_room {
+        margin: 0px 0px 30px 0px;
+    }
+
+    .equipment_items li {
+        margin: 0px 0px 20px 0px;
+        font-size: calc(14px + 2 * (100vw / 1440));
+    }
+
+    .description_room {
+        margin: 50px 0px;
+    }
+
+    .equipment_items {
+        column-count: 1;
+    }
+}

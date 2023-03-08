@@ -1,0 +1,92 @@
+/*---Подвал--------------------------------------------------------------------------------------------------*/
+footer {
+    background-color: #323333;
+    padding: 100px 0px;
+}
+
+.footer_body {
+    display: flex;
+    justify-content: center;
+    gap: 0px 40px;
+
+}
+
+.footer_copyr {
+    color: #EFEFEF;
+    display: flex;
+    align-items: flex-end;
+    font-size: calc(12px + 2 * (100vw / 1440));
+    font-weight: 300;
+}
+
+.footer_title {
+    color: #fff;
+    margin: 0px 0px 24px 0px;
+    font-size: calc(14px + 2 * (100vw / 1440));
+}
+
+.footer_icons {
+    display: flex;
+    gap: 0px 30px;
+}
+
+.footer_social_media {
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    padding: 0px 50px;
+}
+
+.footer_icon a {
+    color: #fff;
+    font-size: 40px;
+    transition: all 0.2s ease-out;
+}
+
+.footer_icon a:hover {
+    color: rgb(106, 113, 113);
+}
+
+@media(max-width:860px) {
+    /* Подвал сайта */
+    .footer_social_media {
+        padding: 0px 20px;
+    }
+
+    .footer_body {
+        gap: 0px 20px;
+    }
+}
+
+@media(max-width:767px) {
+
+.footer_title {
+    font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+}
+.footer_copyr {
+    font-size: calc(12px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+}
+footer {
+    padding: 50px 0px;
+}
+
+.footer_body {
+    flex-direction: column-reverse;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0px;
+}
+
+.footer_title {
+    margin: 0px 0px 15px 0px;
+}
+
+.footer_social_media {
+    border-right: none;
+    border-left: none;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 20px 0px;
+}
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?2a0662');
+  src:  url('../fonts/icomoon.eot?2a0662#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?2a0662') format('truetype'),
+    url('../fonts/icomoon.woff?2a0662') format('woff'),
+    url('../fonts/icomoon.svg?2a0662#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before, [class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-up:before {
+  content: "\e908";
+}
+._icon-banktransfer:before {
+  content: "\e900";
+}
+._icon-facebook:before {
+  content: "\e901";
+}
+._icon-instagram:before {
+  content: "\e902";
+}
+._icon-mastercard:before {
+  content: "\e903";
+}
+._icon-paypal:before {
+  content: "\e904";
+}
+._icon-visa:before {
+  content: "\e905";
+}
+._icon-vk:before {
+  content: "\e906";
+}
+._icon-youtube:before {
+  content: "\e907";
+}

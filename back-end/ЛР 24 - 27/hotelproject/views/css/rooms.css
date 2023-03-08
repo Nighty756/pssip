@@ -1,0 +1,345 @@
+/* Верхний контент */
+.head_reviews {
+    position: relative;
+}
+
+.head_reviews_content {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+.head_reviews_content>*:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+}
+
+
+
+/* Поиск */
+input[type=search] {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type=search]:focus {
+  border: 3px solid rgb(0, 0, 0)
+}
+/* ----------- */
+h1 {
+    font-size: calc(30px + 20 * (100vw / 1440));
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+._ibg {
+    position: relative;
+    background: #000;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.main_block-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* ===================================================================================== */
+.swiper-container {
+    width: 50%;
+
+    position: relative;
+
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+    width: 5% !important;
+    border-radius: 5px !important;
+}
+
+
+
+/* Категории номеров */
+.rooms_item {
+    box-shadow: -1px 2px 48px 6px rgba(34, 60, 80, 0.2);
+}
+
+.rooms_block {
+    margin: 80px 0px;
+}
+
+.rooms_item_body {
+    display: flex;
+}
+
+.rooms_info {
+
+    padding: 20px 20px 20px 60px;
+    width: 100%;
+
+}
+
+.rooms_info_body {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.rooms_info_body>*:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+}
+
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.swiper-slide::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.412);
+    width: 100%;
+
+    padding: 15px 15px;
+}
+
+.rooms_info_title {
+    font-weight: 500;
+    font-size: calc(20px + 10 * (100vw / 1440));
+}
+
+.rooms_info_text {
+    font-weight: 300;
+    font-size: calc(15px + 5 * (100vw / 1440));
+    line-height: calc(27 / 20 * 100%);
+    text-align: justify;
+}
+
+.rooms_info_icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px 0px;
+ 
+}
+
+
+.rooms_info_price {
+
+    font-size: calc(14px + 2 * (100vw / 1440));
+    flex: 1 1 auto;
+}
+
+.rooms_icon_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 0px;
+    flex: 1 1 33.333%;
+}
+
+.rooms_icon_text {
+    text-align: center;
+    font-size: calc(12px + 4 * (100vw / 1440));
+    line-height: calc(22 / 16 * 100%);
+}
+
+.rooms_icon img {
+    max-width: 100%;
+
+}
+
+.bold_price {
+    font-size: calc(15px + 10 * (100vw / 1440));
+    font-weight: 500;
+}
+
+.rooms_info_btn>*:not(:last-child) {
+    margin: 0px 25px 0px 0px;
+}
+.rooms_info_btn {
+    display: flex;
+
+}
+.room-btn {
+    display: block;
+    color: #000;
+    text-align: center;
+    width: 170px;
+    transition: .2s;
+    padding: 25px 0px;
+}
+
+.booking-btn {
+    background-color: #FFCB47;
+}
+
+.booking-btn:hover {
+    box-shadow: 1px 1px 8px 7px rgba(255, 203, 71, 0.3);
+}
+
+.more-btn {
+    transition: .3s;
+    position: relative;
+    overflow:hidden;
+}
+
+
+
+.more-btn::before,
+.more-btn::after {
+   content: '';
+   position: absolute;
+   left:0;
+   right:0;
+   top:0;
+   bottom: 0;
+   height: 100%;
+   background: #000000;
+   z-index: -1;
+   transform: translate3D(0,-101%,0);
+   transition: all .5s;
+}
+.more-btn::before {
+   border: 1px solid black;
+   background: #fff;
+   z-index: -2;
+   transform: translate3D(0,0,0);
+}
+.more-btn:hover {
+   color:white;
+}
+.more-btn:hover::after {
+   transform: translate3D(0,0,0);
+}
+
+.rooms_body>*:not(:last-child) {
+    margin: 0px 0px 50px 0px;
+}
+
+.rooms_body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===================================================================================== */
+
+/* media-запросы */
+
+@media(max-width:992px) {
+
+    .rooms_card {
+        flex: 0 1 50%;
+    }
+
+    .rooms_item_body {
+        flex-direction: column;
+    }
+
+    .rooms_body>*:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 40vw;
+    }
+
+
+    .rooms_info {
+        padding: 15px;
+    }
+
+    .rooms_info_title {
+        text-align: center;
+    }
+
+    .rooms_info_btn,
+    .room-btn {
+        width: 100%;
+    }
+
+    .room-btn {
+        padding: 15px 0px;
+    }
+
+    .rooms_info_btn>*:not(:last-child) {
+        margin: 0px 0px 15px 0px;
+    }
+
+    .rooms_info_btn{
+        flex-wrap: wrap;
+    }
+
+    .rooms_info_price {
+        text-align: center;
+    }
+}
+
+@media(max-width:768px) {
+    /* Адаптиынй шрифт */
+
+    h1 {
+        font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_info_title {
+        font-size: calc(20px + (10 + 10 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_info_text {
+        font-size: calc(15px + (5 + 5 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_info_price {
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .rooms_icon_text {
+        font-size: calc(12px + (4 + 4 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .bold_price {
+        font-size: calc(15px + (10 + 10 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    /* ------------------------------------------------------------------ */
+}
+
+@media(max-width:620px) {
+    .rooms_info_body>*:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+
+    .rooms_block {
+        margin: 50px 0px;
+    }
+}
+

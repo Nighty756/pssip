@@ -1,0 +1,82 @@
+
+
+.date-form {
+    display: flex;
+}
+
+.form-date-body {
+    display: flex;
+    padding: 15px 20px;
+    column-gap: 5px;
+    max-width: 350px;
+    background-color: #fff;
+}
+
+.date-input {
+    width: 100%;
+    cursor: pointer;
+    padding: 2px 0px;
+
+}
+
+.date-input:active,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+    cursor: default;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.date-line {
+    background-color: #5B6460;
+    width: 0.7px;
+}
+
+.date-form-btn {
+    margin-left: 5px;
+    padding: 0px 25px;
+    background-color: #FFCB47;
+    transition: all 0.2s ease-out;
+}
+
+.date-form-btn:hover {
+    background-color: #eec354;
+}
+.title-date{
+    color: #000;
+}
+.title-date,
+.date-form-btn {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media(max-width:620px) {
+    .date-form {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:768px) {
+    .date-form-btn {
+        flex: 1 1 auto;
+        margin-left: 0px;
+        padding: 15px;
+    }
+    .form-date-body {
+        max-width: 100%;
+        padding: 15px 10px;
+        flex: 1 1 auto;
+    }
+
+    .title-date {
+        font-size: 14px;
+    }
+
+    .date-input::placeholder {
+        font-size: 12px;
+    }
+}

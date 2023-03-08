@@ -1,0 +1,352 @@
+h1 {
+    font-size: calc(20px + 20 * (100vw / 1440));
+    font-weight: 600;
+}
+.booking_form_block{
+    margin: 100px 0px;
+}
+.head_booking_form{
+    margin: 0px 0px 70px 0px;
+}
+
+.head_booking_form > *:not(:last-child){
+    margin: 0px 0px 24px 0px;
+}
+.back_to_rooms a{
+    text-transform: uppercase;
+    color: #262525;
+}
+
+.back_to_rooms span{
+    padding: 0px 0px 0px 25px;
+    background: url(../icons/icons-arrows/arrow-left.svg) left no-repeat;
+}
+
+
+/* Форма */
+form{
+    display: flex;
+    flex-direction: column ;
+}
+.booking_form {
+  
+}
+.booking_form_body{
+    max-width: 660px;
+
+    margin: 15px 0px 0px 0px;
+}
+
+.data_block{
+
+    border-top: 1px solid black;
+    margin: 0px 0px 25px 0px;
+    padding-top: 25px;
+}
+.data_block_body{
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.booking_item{
+    padding:  10px;
+    flex: 0 1 50%;
+    position: relative;
+}
+.tel-block{
+    flex: 0 1 100%;
+}
+
+.booking_form_title{
+    margin: 0px 0px 15px 0px;
+    font-size: calc(16px + 8 * (100vw / 1440))
+}
+
+.booking_input-group {
+    position: relative;
+
+}
+.booking_input-group input, textarea{
+    border: 1px solid #5B6460;
+    width: 100%;
+}
+
+
+
+
+.input-label {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 15px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.area-label {
+    background-color: #ffffff;
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    pointer-events: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.booking_input-group input:focus+label,
+.booking_input-group input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 16px;
+}
+
+.booking_input-group textarea:focus+label,
+.booking_input-group textarea:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 16px;
+}
+
+.booking_input-group input {
+    height: 50px;
+    padding: 0px 10px;
+    font-size: 16px;
+}
+
+.booking_input-group input:focus,
+textarea:focus {
+    border-bottom: 3px solid #323333;
+}
+
+.booking_input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.booking_input-group textarea {
+    padding: 10px;
+}
+
+
+
+.booking_btn {
+    padding: 18px 80px;
+    background: #5B6460;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+}
+
+.booking_btn:hover {
+    background: #404441;
+}
+
+/* ===================================================================================== */
+/* Информация о заброннированном номере */
+.info_booking_room{
+    position: fixed;
+    top: 150px;
+    right: 30px;
+    padding: 15px;
+    border: 2px solid #323333;
+}
+.info_booking_title{
+    font-size: calc(16px + 4 * (100vw  / 1440));
+    text-align: center;
+}
+.form-date-body {
+border: 1px solid #5B6460;
+background-color: #E1E1E1;
+}
+.date-body > *:not(:last-child){
+    margin: 0px 0px 10px 0px;
+} 
+.date-input{
+    background-color: #E1E1E1;
+    cursor: default;
+}
+select{
+    background-color: #E1E1E1;
+}
+.select_room_title{
+    font-weight: 300;
+    font-size: calc(14px + 4 * (100vw / 1440));
+    margin: 30px 0px 15px 0px;
+}
+.select_room, .select_room_price{
+    font-weight: 600;
+}
+
+.select_room_info {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+   /* ------ */
+   .list-group {
+	display: flex;
+	flex-direction: column;
+    width: 50%;
+  }
+  .list-group-item {
+	position: relative;
+	display: block;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: -1px;
+    color: rgb(0, 0, 0);
+  }
+  .list-group-item, .select_room_block > *{
+    border-bottom: 1px solid #5B6460;
+    margin: 0px 0px 13px 0px;
+  }
+  .list-header{
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+    
+  .list-header:before,
+  .list-header:after{
+      content: '';
+      background-color: rgb(0, 0, 0);
+      position:absolute;
+      width: 10px;
+      height: 1px;
+      top: 18px;
+  }
+  .list-header:before{
+    transform: rotate(-40deg);
+    right: 8px;
+}
+.list-header:after{
+  transform: rotate(40deg);
+  right: 16px;
+}
+.list-header.active:before{
+  transform: rotate(40deg);
+}
+.list-header.active:after{
+  transform: rotate(-40deg);
+}
+.spoiler-body {
+	display: none;
+  }
+  @media(max-width:1920px){
+    .list-group{
+        display: none;
+    }
+  }
+  @media(max-width:1100px){
+	.list-group{
+		display: block;
+	}
+    .select_room_row{
+        display: none;
+    }
+}    
+
+
+.book-btn {
+    background: #000000;
+    padding: 18px 80px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-btn:hover {
+    background: #3c3c3c;
+}
+
+
+/* ===================================================================================== */
+/* media-запросы */
+@media(max-width:1100px) {
+    .booking_form_block{
+        margin: 80px 0px;
+    }
+    .page{
+        position: relative;
+    }
+    .info_booking_body{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .info_booking_room{
+        position: static;
+
+        padding: 15px;
+        width: 100%;
+
+    }
+    .select_room_title{
+        font-weight: 300;
+        font-size: calc(14px + 4 * (100vw / 1440));
+        margin: 0px;
+    }
+    .form-date-body {
+        padding: 15px 20px;
+    }
+
+
+}
+@media(max-width:768px) {
+    /* Адаптиынй шрифт */
+    h1 {
+        font-size: calc(20px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .booking_form_title{
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320px) / 1440))
+    }
+    .info_booking_title{
+        font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .select_room_title{
+        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    /*-----------------------------------------------------------------------------------------------------*/
+    .booking_form{
+        max-width: 100%;
+    }
+    .data_block_body{
+        margin: 0px;
+    }
+    .pay_block_body{
+        margin: 0px;
+    }
+    .booking_item{
+        padding: 10px 0px;
+        flex: 0 1 100%;
+    }
+    .booking_item:last-child{
+        margin-left: 0;
+    }
+    .info_booking_body{
+        flex-direction: column;
+    }
+    .list-group {
+        width: 100%;
+    }
+    .booking_form_block{
+        margin: 50px 0px;
+    }
+    .head_booking_form{
+        margin: 0px 0px 30px 0px;
+    }
+}
+

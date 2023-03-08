@@ -1,0 +1,16 @@
+body {
+	font-family: sans-serif;
+	font-weight: 700;
+	background-color: yellow;
+}
+
+	form div {
+	margin: 12px;
+}
+
+	form button {
+	margin-top: 10px;
+	font-weight: 700;
+	padding: 10px 20px;
+	font-size: large;
+}

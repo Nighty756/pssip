@@ -1,0 +1,87 @@
+
+.registration_block{
+    margin: 80px 0px;
+}
+
+h1{
+    font-size: calc(30px + 20 * (100vw / 1440));
+    font-weight: 400;
+    text-align: center;
+}
+
+.registration_form_block{
+    max-width: 800px;
+    margin: 50px auto;
+    border-top: 2px solid black;
+
+}
+
+.registration_form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+    margin: 30px 0px;
+}
+
+.input-label{
+    font-size: 20px;
+    margin: 0px 0px 0px 6px;
+}
+
+.input_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+}
+
+.input_item input{
+    border: 1px solid #5B6460;
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+.registration_btn {
+    padding: 18px 80px;
+    background-color: #000000;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    transition: all 0.2s ease-out;
+}
+
+.registration_btn:hover {
+    background: #393a39;
+}
+
+.registration_info{
+    text-align: center;
+}
+
+.registration_info a{
+    padding: 0px 0px 0px 10px;
+}
+
+/* Стили для ошбики */
+
+.text-danger{
+    color: red;
+    font-size: calc(12px + 4 * (100vw / 1440));
+}
+
+
+
+@media(max-width:768px) {
+    /* Адаптиынй шрифт */
+h1 {
+    font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+}
+/* ------------- */
+.registration_block{
+    margin: 40px 0px;
+}
+.registration_form{
+    gap: 20px 0px;
+}
+}

@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap&subset=cyrillic-ext');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.green{
+    background-color: green;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+.page {
+    flex: 1 1 auto;
+    margin: 78px 0px 0px 0px;
+}
+._container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}

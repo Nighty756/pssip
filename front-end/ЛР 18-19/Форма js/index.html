@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <script></script>
+    <form name="form_test" action="#" method="#" id="form">
+        <div>
+          <label>
+            Имя:
+            <input type="text" pattern="^[a-zA-Z]+$" name="name" maxlength="15" value="" required>
+          </label>
+        </div>
+        <div>
+          <label>
+            Возраст:
+            <input type="number" name="age" value="30">
+          </label>
+        </div>
+        <div>
+          <label>
+            Email:
+            <input type="email" name="mail" value="">
+          </label>
+        </div>
+        <div>
+          <label>
+            Я согласен с правилами:
+            <input type="checkbox" name="terms" checked>
+          </label>
+        </div>
+        <div>
+          Тарифный план:
+          <select name="plan">
+            <option value="free" selected>Бесплатный</option>
+            <option value="simple">Простой</option>
+            <option value="pro">Профессиональный</option>
+          </select>
+        </div>
+        <div>
+       <p><input name="color" type="radio" value="red"> Красный</p>
+       <p><input name="color" type="radio" value="green"> Зеленый</p>
+       <p><input name="color" type="radio" value="blue" checked> Синий</p>
+  </div>
+  <div id="printBlock"></div>
+        <div>
+          <button class="button_form" type="submit">Отправить</button>
+       
+          </div>
+      </form>
+    
+
+ <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+
+body.lock {
+    overflow: hidden;
+}
+/* Верхний контент */
+.head_reviews {
+    position: relative;
+}
+
+.head_reviews_content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 70px 0px;
+}
+.head_reviews_content > *:not(:last-child){
+    margin: 0px 0px 10px 0px;
+}
+h1{
+    font-size: calc(30px + 20 * (100vw / 1440));
+    font-weight: 600;
+}
+.subtitle_head_reviews{
+font-size: calc(16px + 4 * (100vw / 1440));
+}
+._ibg {
+    position: relative;
+    background: #000;
+}
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.main_block-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+/* ===================================================================================== */
+
+/* Форма отзыва */
+.form_review{
+    margin: 23px 0px 0px 0px
+}
+.form_review_body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+.form_review_body > *{
+    margin: 0px 0px 30px 0px;
+}
+
+
+/* модальное окно */
+.popup{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+.popup_body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_content{
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    width: 710px;
+    padding: 20px;
+    position: relative;
+}
+.popup_close{
+    position: absolute;
+    right: 0px;
+    font-size: 30px;
+    color: #000;
+}
+
+.popup_head{
+border-bottom: 2px solid #000;
+padding: 0px 0px 20px 0px;
+position: relative;
+}
+.popup_title{
+    font-weight: 400;
+    font-size: calc(18px + 7 * (100vw / 1440));
+}
+.popup_title span {
+    padding: 0px 32px 0px 0px;
+    background: url('../icons/icons-review/review.svg') right no-repeat;
+}
+.popup_form{
+    margin: 25px 0px 0px 0px;
+}
+/* --- */
+.reviews_input-group {
+    position: relative;
+    margin: 0px 0px 30px 0px;
+}
+
+.input-label {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.area-label {
+    background-color: #ffffff;
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    pointer-events: none;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.reviews_input-group input:focus+label,
+.reviews_input-group input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 16px;
+}
+
+.reviews_input-group textarea:focus+label,
+.reviews_input-group textarea:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 16px;
+}
+
+.reviews_input-group input {
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.reviews_input-group input:focus,
+textarea:focus {
+    border-bottom: 3px solid #ffb700;
+}
+
+.reviews_input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.reviews_input-group textarea {
+    padding: 10px;
+}
+
+.reviews_input-group input,
+textarea {
+    border: 1px solid #5B6460;
+    width: 100%;
+}
+
+.review_button {
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    background-color: #FFCB47;
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 12px 20px;
+    transition: .2s;
+}
+
+.review_button span {
+    padding: 0px 32px 0px 0px;
+    background: url('../icons/icons-review/review.svg') right no-repeat;
+}
+
+.review_button:hover {
+    background-color: #e5c165;
+}
+
+.review_button_form{
+    padding: 12px 50px;
+}
+
+.reviews_button_content {
+    margin: 15px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===================================================================================== */
+
+/* Отзывы */
+.content_reviews{
+    margin: 50px 0px
+}
+.item_review{
+box-shadow: 0px 8px 8px 4px rgba(34, 60, 80, 0.2);
+border: 1px solid black;
+border-radius: 22px;
+margin: 0px 0px 25px 0px;
+}
+.item_review_content{
+    padding: 25px;
+}
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating_form{
+    margin: 0px 0px 15px 0px;
+}
+
+.rating_item {
+    font-size: 35px;
+    cursor: default;
+}
+
+.item-pointer:hover,
+.item-pointer:hover ~ .rating_item {
+   color: rgb(93, 95, 90);
+}
+
+.item-pointer{
+    transition: .2s;
+    color: rgb(136, 132, 127);
+    cursor: pointer;
+}
+
+.rating[data-total-value="1"] .rating_item:nth-child(n + 5),
+.rating[data-total-value="2"] .rating_item:nth-child(n + 4),
+.rating[data-total-value="3"] .rating_item:nth-child(n + 3),
+.rating[data-total-value="4"] .rating_item:nth-child(n + 2),
+.rating[data-total-value="5"] .rating_item:nth-child(n + 1) {
+    color: rgb(47, 46, 44);
+}
+.author_review,
+.date_review {
+    color: #757575;
+}
+
+.review_text {
+    font-size: calc(14px + 2 * (100vw / 1440));
+    line-height: calc(20 / 14 * 100%);
+    margin: 25px 0px 35px 0px;
+}
+
+.author_review {
+    font-size: calc(18px + 7 * (100vw / 1440));
+}
+
+.date_review {
+    font-size: calc(14px + 6 * (100vw / 1440));
+}
+
+.review_info p:first-child {
+    margin: 0px 0px 5px 0px;
+}
+/* ===================================================================================== */
+
+
+
+/* media-запросы */
+@media(max-width:767px){
+    /* Отзывы */
+    .content_reviews{
+        margin: 30px 0px
+    }
+    .item_review_content{
+        padding: 15px;
+    }
+    .review_text {
+        margin: 15px 0px 25px 0px;
+    }
+   /* ------------------------------------------------------------------ */
+
+    /* Адаптиынй шрифт */
+    .title_block {
+        font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .subtitle_head_reviews{
+        font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .author_review {
+        font-size: calc(18px + (7 + 7 * 0.7) * ((100vw - 320px) / 1440));
+    }
+
+    .date_review {
+        font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .review_text {
+        font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    .popup_title{
+        font-size: calc(18px + (7 + 7 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    h1{
+        font-size: calc(30px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
+    }
+    /* ------------------------------------------------------------------ */
+}
